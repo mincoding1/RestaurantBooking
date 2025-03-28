@@ -2,9 +2,10 @@
 #include <vector>
 #include <stdexcept>
 #include <algorithm>
-#include "Schedule.cpp"
-#include "MailSender.cpp"
-#include "SmsSender.cpp"
+
+#include "schedule.cpp"
+#include "mail_sender.cpp"
+#include "sms_sender.cpp"
 
 using std::vector;
 
@@ -46,7 +47,7 @@ public:
 
         // 고객에게 SMS 발송
         smsSender->send(schedule);
-        // 고객이 E Mail을 가지고 있을 경우 E Mail 발송
+        // 고객이 E-Mail을 가지고 있을 경우 E-Mail 발송
         if (schedule->getCustomer().getEmail() != "") {
             mailSender->sendMail(schedule);
         }
