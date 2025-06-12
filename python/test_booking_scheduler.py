@@ -1,5 +1,4 @@
 import pytest
-from datetime import datetime
 
 from schedule import Customer, Schedule
 from communication import SmsSender, MailSender
